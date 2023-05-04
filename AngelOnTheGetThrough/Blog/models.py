@@ -20,7 +20,7 @@ def post_featured_image_upload_path(instance, filename):
     return os.path.join(folder_path, filename)
 
 # Post model
-class Post(models.model):
+class Post(models.Model):
     post_title = models.CharField(max_length=200)
     post_author = models.ForeignKey(User, on_delete=models.CASCADE)
     post_date = models.DateTimeField(default=timezone.now)
